@@ -1,7 +1,6 @@
 from faker import Faker
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-
 from ..locators import UserRegistrationLocators
 
 
@@ -59,7 +58,6 @@ class TestUserRegistration:
         driver.find_element(*UserRegistrationLocators.LOGIN_AND_REGISTRATION_BUTTON).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(UserRegistrationLocators.NO_ACCOUNT_BUTTON))
         driver.find_element(*UserRegistrationLocators.NO_ACCOUNT_BUTTON).click()
-
 
         driver.find_element(*UserRegistrationLocators.INPUT_EMAIL).send_keys('test1337@email.ru')
         driver.find_element(*UserRegistrationLocators.INPUT_PASSWORD).send_keys('1qaz2wsx')
