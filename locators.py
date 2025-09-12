@@ -12,6 +12,8 @@ class UserRegistrationLocators:
     ERROR_BLOCK_PASSWORD = (By.XPATH, '//*[@id="root"]/div/div[2]/div[5]/form/div[2]/div[2]/div/div')
     ERROR_BLOCK_REPEAT_PASSWORD = (By.XPATH, '//*[@id="root"]/div/div[2]/div[5]/form/div[2]/div[3]/div/div')
     ERROR_EMAIL = (By.XPATH, './/div/span[@class="input_span__yWPqB" and text()="Ошибка"]')
+    USER_NAME = (By.XPATH, './/div/h3[@class = "profileText name"]')
+    USER_AVATAR = (By.XPATH, './/button[@class="circleSmall"]')
 
 
 class UserLoginLocators:
@@ -30,12 +32,11 @@ class AdLocators:
     AD_DESCRIPTION = (By.CSS_SELECTOR, 'textarea[name=description]')
     AD_PRICE = (By.NAME, 'price')
     SELECT_AD_CATEGORY_BUTTON = (By.XPATH, '//*[@id="root"]/div/div[2]/div/form/div[2]/div[2]/div[1]/button')
-    # SELECT_AD_CATEGORY_BUTTON = (By.XPATH, './/div/button[@class="dropDownMenu_arrowUp__I25Xq dropDownMenu_noDefault__wSKsP"]')
     AD_CATEGORY_ITEMS = (By.CSS_SELECTOR, '.dropDownMenu_dropMenu__sBxhz:has(input[name="category"]) button.dropDownMenu_btn__o8ARs')
-    # SELECT_AD_CITY_BUTTON = (By.XPATH, './/div/button[@class="dropDownMenu_arrowDown__pfGL1 dropDownMenu_noDefault__wSKsP"]')
     SELECT_AD_CITY_BUTTON = (By.XPATH, '//*[@id="root"]/div/div[2]/div/form/div[3]/div[1]/button')
     AD_CITY_ITEMS = (By.CSS_SELECTOR, '.dropDownMenu_dropMenu__sBxhz:has(input[name="city"]) button.dropDownMenu_btn__o8ARs')
     AD_ITEM_CONDITION = (By.CLASS_NAME, 'radioUnput_inputRegular__FbVbr')
     AD_BUTTON_PUBLISH = (By.XPATH, './/form[@class="createListing_shell__A5EA7"]/button[@type="submit"]')
     MY_AD_IN_PROFILE = (By.XPATH, '(//div[@class="card"])[last()]//h2')
+    LAST_CARD_AD = (By.XPATH, '(//div[@class="card"])')
     AD_ARROW_NEXT = (By.CSS_SELECTOR, '.arrowButton.arrowButton--right')

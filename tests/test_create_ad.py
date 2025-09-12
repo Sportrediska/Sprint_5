@@ -43,15 +43,15 @@ class TestCreateAd:
 
         driver.find_element(*AdLocators.AD_ITEM_CONDITION).click()
         driver.find_element(*AdLocators.AD_BUTTON_PUBLISH).click()
-        time.sleep(2)
+        WebDriverWait(driver, 3).until(EC.invisibility_of_element_located(AdLocators.AD_BUTTON_PUBLISH))
         driver.find_element(*UserLoginLocators.USER_AVATAR).click()
-        WebDriverWait(driver, 5).until(EC.visibility_of_element_located(AdLocators.AD_ARROW_NEXT))
+        WebDriverWait(driver, 3).until(EC.visibility_of_element_located(AdLocators.AD_ARROW_NEXT))
 
         while True:
             next_button = driver.find_element(*AdLocators.AD_ARROW_NEXT)
             if next_button.get_attribute("disabled"):
                 break
             next_button.click()
-            time.sleep(1)
+            time.sleep(0.5)
         last_ad_title = driver.find_element(*AdLocators.MY_AD_IN_PROFILE).text
         assert last_ad_title == title
