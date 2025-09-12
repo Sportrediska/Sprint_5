@@ -11,10 +11,10 @@ class UserRegistrationLocators:
     USER_NAME = (By.XPATH, './/div/h3[@class = "profileText name"]')
     USER_AVATAR = (By.XPATH, './/button[@class="circleSmall"]')
 
-# ERROR_BLOCK_EMAIL = //*[@id="root"]/div/div[2]/div[5]/form/div[2]/div[1]/div/div
-# ERROR_BLOCK_PASSWORD = 
-# ERROR_BLOCK_REPEAT_PASSWORD =
-ERROR_EMAIL = (By.XPATH, './/div/span[@class="input_span__yWPqB" and text()="Ошибка"]')
+    ERROR_BLOCK_EMAIL = (By.XPATH, '//*[@id="root"]/div/div[2]/div[5]/form/div[2]/div[1]/div/div')
+    ERROR_BLOCK_PASSWORD = (By.XPATH, '//*[@id="root"]/div/div[2]/div[5]/form/div[2]/div[2]/div/div')
+    ERROR_BLOCK_REPEAT_PASSWORD = (By.XPATH, '//*[@id="root"]/div/div[2]/div[5]/form/div[2]/div[3]/div/div')
+    ERROR_EMAIL = (By.XPATH, './/div/span[@class="input_span__yWPqB" and text()="Ошибка"]')
 
 LOGIN_BUTTON = (By.XPATH, './/div/button[text()="Войти"]')
 LOGOUT_BUTTON = (By.XPATH, './/div/button[text()="Выйти"]')
