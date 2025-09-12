@@ -8,7 +8,6 @@ class UserRegistrationLocators:
     INPUT_PASSWORD = (By.NAME, 'password')
     INPUT_REPEAT_PASSWORD = (By.NAME, 'submitPassword')
     CREATE_ACCOUNT_BUTTON = (By.XPATH, './/button[text()="Создать аккаунт"]')
-
     ERROR_BLOCK_EMAIL = (By.XPATH, '//*[@id="root"]/div/div[2]/div[5]/form/div[2]/div[1]/div/div')
     ERROR_BLOCK_PASSWORD = (By.XPATH, '//*[@id="root"]/div/div[2]/div[5]/form/div[2]/div[2]/div/div')
     ERROR_BLOCK_REPEAT_PASSWORD = (By.XPATH, '//*[@id="root"]/div/div[2]/div[5]/form/div[2]/div[3]/div/div')
