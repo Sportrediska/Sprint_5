@@ -12,8 +12,7 @@ class TestCreateAd:
     def test_ad_creation_unauthenticated_user_shows_authorization_modal(self, driver):
         driver.get('https://qa-desk.stand.praktikum-services.ru/')
         driver.find_element(*AdLocators.ADD_AD_BUTTON).click()
-        WebDriverWait(driver, 3).until(EC.visibility_of_element_located(AdLocators.AD_POPUP_UNAUTH))
-        assert True
+        assert WebDriverWait(driver, 3).until(EC.visibility_of_element_located(AdLocators.AD_POPUP_UNAUTH))
 
     # Создание объявления авторизованным пользователем
     def test_ad_creation_authenticated_user_ad_published_and_visible_in_profile(self, driver):
